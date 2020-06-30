@@ -1,0 +1,314 @@
+
+.img-fluid{
+	max-width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.btn1{
+	background-color: #FF6138;
+	margin-left: -300px;
+	font-size: 24px;
+	margin-top: 30px;
+	color: white;
+	height: 100px;
+border-radius: 10px;
+padding:40px;
+}
+
+.btn1:hover{
+	background-color: grey;
+}
+
+.form1{
+background-color: white;
+margin-left: 650px;
+height: 550px;
+width: 550px;
+padding-left: 100px;
+margin-right: -50px;
+}
+.sec1Container{
+width: 600px;
+margin-left: -200px;
+margin-bottom:-250px;
+}
+
+.sec1h1{
+font-family: 'Playfair Display' ;
+}
+.sec2
+{
+color: white;
+background-color: #FF896B;
+}
+
+.sec2a{
+	background-color: white;
+	color: black;
+}
+
+.sec2h2{
+font-family: 'Playfair Display' ;
+}
+
+.sec2text{
+ font-family: 'Muli' ;
+}
+.btn3{
+	background-color: #FF6138;
+	color: white;
+}
+
+.btn3:hover{
+	background-color: grey;
+}
+
+.sec3{
+	padding: 10px;
+}
+.sec3h6{
+	text-align: center;
+	padding-top: 20px;
+	font-family: 'Playfair Display' ;
+}
+.sec3span{
+	margin-left: 180px;
+	font-size: 30px;
+	border:1px solid black;
+	margin-bottom: 20px;
+	color:#FF896B;
+
+}
+#carouselExampleIndicators{
+	padding:100px;
+}
+.btn4{
+	background-color: #FF896B;
+	padding: 17px;
+	border-radius: 8px;
+
+}
+.btn4:hover{
+	background-color: #F5FDFA;
+	color:#FF896B;
+	border:0.5px solid #FF896B;
+}
+/*.sec5div{
+	background-image: url("pics/event.jpg");
+}*/
+.sec4btns{
+	padding: 50px;
+}
+.sec4btns:hover{
+	background-color: #FF896B;
+	color: white;
+}
+.sec4div{
+border: 1px solid grey;
+box-shadow: 3px 10px #D3D7D6 ;
+clear: both;
+
+
+}
+.sec4div:hover{
+	background-color:  #FF896B;
+}
+
+.sec5con{
+	font-family: 'Playfair Display' ;
+	margin-left: 600px;
+	padding: 50px;
+	margin-bottom: 100px;
+}
+.sec5inner{
+	padding: 50px;
+	margin-left: 100px;
+}
+.btn5{
+	background-color: #FF896B;
+}.btn5:hover{
+	background-color: white;
+}
+.btn5a
+{
+	background-color: white;
+	border: 1px solid #FF896B;
+	color: #FF896B;
+}.btn5a:hover{
+	background-color: #FF896B;
+	color: white;
+}
+.sec5inner{
+	margin-bottom: -50px;
+	padding-bottom: 30px;
+	margin-top: -150px;
+	font-family: 'Playfair Display' ;
+	padding-left:100px;
+	padding-top: 120px;
+}
+.sec5date{
+	background-color: #FAFAFA;
+	width: 80px;
+	margin-top: 50px;
+	margin-left: 47px;
+	 font-family: 'Playfair Display' ;
+}
+.btn5{
+background-color:  #FF896B;
+color:white;
+}
+.btn5:hover{
+border:0.5px solid #FF896B;
+background-color: white ;
+color: #FF896B;
+
+}
+.sec6h6{
+	text-align: center;
+
+}
+.endF{
+	background-color: #2C2727;
+	color: white;
+	padding:128px 0px;
+	height: 800px;
+}
+.footercall{
+	margin: 
+}
+.footerli{
+	padding: 8px 0px;
+}
+.sec6p{
+	margin-left: 400px;
+	padding:100px;
+	 font-family: 'Muli' ;
+}
+
+.footerrow{
+	 font-family: 'Playfair Display' ;
+}
+
+.menu1{
+border: 1px solid black;
+
+}
+.abc{
+background-image: url("pics/bg_1.jpg");
+height: 650px;
+}
+
+.abouth1{
+	font-family: 'Playfair Display' ;
+}
+.aboutpara{
+	 font-family: 'Muli' ;
+}
+
+.aboutSec1{
+
+	margin-top: 500px;
+	padding-left: 30px;
+	color: white;
+}
+
+.aboutsec2{
+	padding:100px;
+}
+
+.contactsecform{
+	padding:200px;
+	border:1px solid #F8FAFF;
+	margin:100px;
+	background-color: #F8FAFF;
+}
+
+.contactbtn{
+	background-color:#FF896B;
+	color: white;
+	padding
+
+}.contactbtn:hover{
+	border:1px solid #FF896B;
+	background-color: white;
+	color: #FF896B;
+}
+/*.pqr{
+		height: 100px;
+		border: 2px solid grey;
+		border-radius: 10px;
+margin:10px;
+
+background-size: cover;
+}*/
+
+/*	.divhover{
+		visibility: hidden;
+		opacity: 0.9;
+		background-color:#D3D7D6;
+		width: 359px;
+		height: 9vh;
+		padding-left: 50px;
+		margin-left: 104px;
+
+	}*/
+
+body{
+	overflow-x: hidden;
+
+}
+/*body{min-height:200vh;}
+.navbar-default{
+  transition:500ms ease;
+  background:transparent;
+}
+.navbar-default.scrolled{
+  background:blue;
+}*/
+.sec6div{
+background-color: grey;
+opacity: 0.5;
+display:none;
+height: 180px;
+width: 330px;
+
+position: absolute;
+
+margin-top: -180px;
+padding-left: 200px;
+
+}
+.card:hover .sec6div{
+	display: block;
+height: 250px;
+width: 200px;
+
+padding-top: 50px;
+
+}
+
+.sec6img{
+	height: 280px;
+}
+/* .pqr:hover .divhover{
+	visibility: visible;
+	opacity: 0.7;
+	opacity-color:#84D478;
+}*/
+
+/*body{min-height:200vh;}
+.navbar-default{
+  transition:500ms ease;
+  background:transparent;
+}
+.navbar-default.scrolled{
+  background-color:#FFFFFF;
+}*/
+
+
+nav{
+
+	height: 80px;
+	color: white;
+}
