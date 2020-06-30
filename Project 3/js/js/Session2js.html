@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js Session 2</title>
+	<style>
+		.abc{
+			color: red;
+			font-size: 40px;
+			background-color: red;
+		}
+		body{
+			height: 2000px;
+		}
+	</style>
+</head>
+<body>
+	<p id="demo1">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Wikipedia</p>
+<!-- <input type="text" id="demo2" value="abc"> -->
+
+<input type="number" id="input1" placeholder="1st num"><br>
+<span>+</span><br>
+<input type="number" id="input2" placeholder="2nd num"><br><br>
+<button onclick="add()">click me</button>
+
+
+<a href="https://www.google.com/" id="demo3">google</a>
+
+<div id="demo5" style="height: 200px; width: 200px; border: 2px solid black;"></div>
+<button onclick="reddiv();">try it</button>
+
+
+
+<div id="demo6" style="height: 100px; width: 100px; border: 2px solid blue; display: none;"></div>
+
+<button onclick="stylefun();">try it2</button>
+
+
+<script>
+
+	function stylefun() {
+		document.getElementById('demo6').style.display = "block";
+	}
+
+
+	function reddiv() {
+	document.getElementById("demo5").setAttribute("class","abc")
+	}
+
+
+
+
+	// var a = document.getElementById("demo3").getAttribute("class");
+	// alert(a);
+	// document.getElementById("demo3").setAttribute("class","abc");
+
+
+
+
+	// document.getElementById('demo1').innerHTML = "hey";
+	// var a =  document.getElementById('demo1').innerHTML;
+	// alert(a);
+
+	// document.getElementById('demo2').value= "pqr";
+
+
+	// function add() {
+	// 	var a = document.getElementById("input1").value;
+	// 	var b = document.getElementById("input2").value;
+	// 	var c = Number(a) + Number(b);
+	// 	alert(c);
+	// }
+
+
+
+
+</script>
+</body>
+</html>

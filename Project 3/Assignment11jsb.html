@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>navbar change background color onscroll</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&display=swap" rel="stylesheet">
+<style type="text/css">
+		#navbar {
+  overflow: hidden;
+  background-color: #A4A4A6;
+  padding: 10px; 
+  transition: 0.5s; 
+  position: fixed; 
+  width: 100%;
+  top: 0; 
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 30px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+#navbar #logo {
+
+  transition: 0.5s;
+}
+
+#navbar-right {
+  float: right;
+  margin-right: 100px;
+ box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+}
+p{
+	font-size: 25px;
+background-position: center;
+
+border-style: dotted;
+background-color: #F8B8C1;
+margin-top: 350px;
+ position: relative;
+  z-index: 0;
+  width: 800px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+  justify-content: center;
+  margin-left: 300px;
+	
+
+	
+}
+ /*p:before {
+      transition: all 0.4s;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 50%;
+      left: 50%;
+      margin-left: -50%;
+      top: 25%;
+      border-color: rgba(200, 200, 200, 0);
+      border-style: solid;
+      border-width: 0 1px;
+    }
+
+    p:after {
+      transition: all 0.4s;
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 100%;
+      left: 50%;
+      margin-left: -25%;
+      top: 0;
+      border-color: rgba(200, 200, 200, 0);
+      border-style: solid;
+      border-width: 1px 0;
+    }*/
+
+    p:hover {
+        margin-top: 30px;
+      }
+p:after {
+        width: 402px;
+        margin-left: -50%;
+        border-color: rgba(90, 90, 90, 1);
+      }
+
+      p:before {
+        height: 352px;
+        top: 0%;
+        border-color: rgba(90, 90, 90, 1);
+      }
+.box-outer{
+	overflow: hidden;
+	margin: 50px auto;
+	width: 200px;
+	height: 200px;
+}
+.main_box{
+	border: 5px solid #000;
+position: relative;
+}
+
+
+body{
+	background-color: black;
+	font-family: 'Comic Neue', cursive;
+	
+}
+
+/*fire effect*/
+
+
+@keyframes scaleUpDown {
+  0%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50%,
+  90% {
+    transform: scaleY(1.1);
+  }
+  75% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleX(0.95);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: skewX(0) scale(1);
+  }
+  50% {
+    transform: skewX(5deg) scale(0.9);
+  }
+}
+
+@keyframes particleUp {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -100%;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    background-color: #ef5a00;
+  }
+  50% {
+    background-color: #ff7800;
+  }
+}
+
+.fire {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top:50px;
+}
+
+.fire-main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: scaleUpDown 3s ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-main .main-fire {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-main .particle-fire {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 10px;
+  height: 10px;
+  background-color: #ef5a00;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-right {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation: shake 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-right .main-fire {
+  position: absolute;
+  top: 15%;
+  right: -25%;
+  width: 80%;
+  height: 80%;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-right .particle-fire {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-left {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: shake 3s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-left .main-fire {
+  position: absolute;
+  top: 15%;
+  left: -20%;
+  width: 80%;
+  height: 80%;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-left .particle-fire {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 10%;
+  height: 10%;
+  background-color: #ef5a00;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 3s infinite ease-out 0;
+  animation-fill-mode: both;
+}
+
+.fire-bottom .main-fire {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 75%;
+  height: 75%;
+  background-color: #ff7800;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 100% 40%;
+  filter: blur(10px);
+  animation: glow 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.p2{
+	  margin: 0px;
+  padding: 0px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+
+.container p:not(:first-child){
+  margin-top:10px;
+}
+
+.container{
+  font-size: 14px;
+  margin: 0 auto;
+  max-width:400px;
+  position:relative;
+  top: 50px;
+  margin-bottom: -900px;
+  
+}
+
+
+.container ul{
+  position:relative;
+  list-style:none;
+}
+
+.container ul li{
+  padding: 35px;
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform-origin: 50% 100%;
+  border-radius: 4px;
+  
+  }
+
+  .tab-0{
+  transform: translateY(-50px) scale(1.07);
+  opacity:0;
+  z-index:90;
+  filter:blur(10px);
+  transition: all 1s cubic-bezier(0.19, 0.49, 0.46, 0.96);
+}
+
+.tab-1{
+  opacity: 1;
+  background-color: #fff;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  z-index:80;
+  transform: scale(1);
+  transition: all 1s cubic-bezier(0.19, 0.49, 0.46, 0.96) 100ms;
+}
+
+.tab-2{
+  transform:translateY(5px) scale(0.9);
+  opacity: 1;
+  z-index: 70; 
+  background: #e2e7ed;
+  color:#e2e7ed;
+  transition: all 1s cubic-bezier(0.19, 0.49, 0.46, 0.96) 200ms;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  font-size: 10vw;
+  color: white;
+}
+
+canvas {
+  width: 100%;
+}
+</style>
+
+
+<body onscroll="scrollFunction()">
+<div id="navbar">
+ <a href="#default" id="logo"><img src="jpics/maskcorona.png
+  	" style="height: 120px;"></a>
+  	<h1>Covid-19 Pandemic HelpLine</h1>
+  <div id="navbar-right">
+  	
+    <a class="active mlink" href="#home">Home</a>
+    <a href="#contact" class="mlink">Contact</a>
+    <a href="#about" class="mlink">About</a>
+       <a href="#helpline" class="mlink">Helpline</a>
+          <a href="#StayHome" class="mlink">StayHome</a>
+  </div>
+</div>
+<!-- ----------------------->
+
+<div class="container">
+  <span class="title"></span>
+</div>
+<!--============== -->
+<div class="box-outer">
+	
+	<p>Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2).[7] The disease was first identified in December 2019 in Wuhan, the capital of China's Hubei province, and has since spread globally, resulting in the ongoing 2019–20 coronavirus pandemic.[8][9] Common symptoms include fever, cough, and shortness of breath.[4] Other symptoms may include fatigue, muscle pain, diarrhea, sore throat, loss of smell, and abdominal pain.[4][10][11] The time from exposure to onset of symptoms is typically around five days but may range from two to fourteen days.[4][12] While the majority of cases result in mild symptoms, some progress to viral pneumonia and multi-organ failure.[8][13] As of 18 April 2020, more than 2.25 million cases have been reported across 210 countries and territories,[14] resulting in more than 154,000 deaths. More than 571,000 people have recovered.</p></div>
+
+<p>The virus is primarily spread between people during close contact,[a] often via small droplets produced by coughing,[b] sneezing, or talking.[5][15][17] While these droplets are produced when breathing out, they usually fall to the ground or onto surfaces rather than being infectious over long distances.[5][18][19] People may also become infected by touching a contaminated surface and then touching their eyes, nose, or mouth.[5][15] The virus can survive on surfaces for up to 72 hours.[20] It is most contagious during the first three days after the onset of symptoms, although spread may be possible before symptoms appear and in later stages of the disease.[21]</p>
+
+<p>The standard method of diagnosis is by real-time reverse transcription polymerase chain reaction (rRT-PCR) from a nasopharyngeal swab.[22] Chest CT imaging may also be helpful for diagnosis in individuals where there is a high suspicion of infection based on symptoms and risk factors; however, it is not recommended for routine screening.[23][24]</p>
+
+<p>Recommended measures to prevent infection include frequent hand washing, maintaining physical distance from others (especially from those with symptoms), covering coughs and sneezes with a tissue or inner elbow, and keeping unwashed hands away from the face.[25][26] The use of masks is recommended for those who suspect they have the virus and their caregivers.[27] Recommendations for mask use by the general public vary, with some authorities recommending against their use, some recommending their use, and others requiring their use.[28][29][30] Currently, there is no vaccine or specific antiviral treatment for COVID-19.[5] Management involves treatment of symptoms, supportive care, isolation, and experimental measures.[31]</p>
+
+<p>The World Health Organization (WHO) declared the 2019–20 coronavirus outbreak a Public Health Emergency of International Concern (PHEIC)[32][33] on 30 January 2020 and a pandemic on 11 March 2020.[9] Local transmission of the disease has been recorded in most countries across all six WHO regions.</p>
+
+<!-- FIRE EFFECT -->
+<div class="fire">
+  <div class="fire-left">
+    <div class="main-fire"></div>
+    <div class="particle-fire"></div>
+  </div>
+  <div class="fire-main">
+    <div class="main-fire"></div>
+    <div class="particle-fire"></div>
+  </div>
+  <div class="fire-right">
+    <div class="main-fire"></div>
+    <div class="particle-fire"></div>
+  </div>
+  <div class="fire-bottom">
+    <div class="main-fire"></div>
+  </div>
+</div>
+
+<!-- 
+<div class="container" onload="changePos()">
+	<ul class="ultra">
+
+    <li class="tab-0">
+<p class="p2">
+As per the latest update by the Ministry of Health and Family Welfare, Maharashtra has a total of 3,651 positive cases of coronavirus including 365 patients who have recovered, 211 deaths, ANI reported.</p>
+    </li>
+
+    <li class="tab-1">
+<p class="p2">
+India's total number of coronavirus cases has reached 15,712, of which 12,974 cases are active, while 2,231 people have been cured/discharged/migrated and 507 deaths have been reported, as per the ministry.</p>
+         
+    </li>
+
+    <li class="tab-2"> 
+<p class="p2">
+ The worldwide death toll from the novel coronavirus pandemic rose to 160,784, according to a tally from official sources compiled by Worldometer. More than 2,332,456 declared cases have been registered in 193 countries and territories since the epidemic first emerged in China in December.
+    </li>
+
+    </ul>
+</div>
+ -->
+</body>
+<script type="text/javascript">
+	function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.background="#575AEA";
+    document.getElementById("logo").style.fontSize = "4px";
+  } else {
+    document.getElementById("navbar").style.background="#4BDBFA";
+    document.getElementById("logo").style.fontSize = "17px";
+  }
+}
+
+// -----------------
+
+setInterval(changePos,5000)
+
+function changePos(){
+  var x = document.getElementsByClassName("ultra")[0].childNodes;
+  x = Array.from(x)
+   
+  // console.log(x);
+  for(var i=1; i<x.length;i+=2){  
+    if(x[i].classList.contains("tab-0")){
+      x[i].classList.remove("tab-0");
+      x[i].classList.add("tab-2");
+    }
+    else if(x[i].classList.contains("tab-1")){
+      x[i].classList.remove("tab-1");
+      x[i].classList.add("tab-0");
+ 
+    }
+    else if(x[i].classList.contains("tab-2")){
+      x[i].classList.remove("tab-2");
+      x[i].classList.add("tab-1");
+      
+    }
+    
+  }
+  
+  let y = x.filter((a)=> {
+    return a.className !== undefined;
+  })
+  
+  console.log(y)
+  let z = findValue(y,"tab-1");
+  
+  function findValue(arr, str){
+    for(let i=0; i <arr.length ;i++){
+      if(arr[i].className === str){
+        return arr[i].offsetHeight;
+      }
+    }
+  }
+  
+  y.forEach((a)=>{
+    if(a.className==="tab-1"){
+      a.style.transform = `scale(1.0)`
+    } else if (a.className === "tab-2"){
+      a.style.transform = `translateY(${z-a.offsetHeight+30}px) scale(0.9)`
+    }  else if (a.className === "tab-0"){
+      a.style.transform = `translateY(${z-a.offsetHeight-90}px) scale(1.08)`
+    } 
+  })
+  
+}
+
+
+var canvas = document.createElement("canvas");
+var width = canvas.width = window.innerWidth * 0.75;
+var height = canvas.height = window.innerHeight * 0.75;
+document.body.appendChild(canvas);
+var gl = canvas.getContext('webgl');
+
+var mouse = {x: 0, y: 0};
+
+var numMetaballs = 30;
+var metaballs = [];
+
+for (var i = 0; i < numMetaballs; i++) {
+  var radius = Math.random() * 60 + 10;
+  metaballs.push({
+    x: Math.random() * (width - 2 * radius) + radius,
+    y: Math.random() * (height - 2 * radius) + radius,
+    vx: (Math.random() - 0.5) * 3,
+    vy: (Math.random() - 0.5) * 3,
+    r: radius * 0.75
+  });
+}
+
+var vertexShaderSrc = `
+attribute vec2 position;
+
+void main() {
+// position specifies only x and y.
+// We set z to be 0.0, and w to be 1.0
+gl_Position = vec4(position, 0.0, 1.0);
+}
+`;
+
+var fragmentShaderSrc = `
+precision highp float;
+
+const float WIDTH = ` + (width >> 0) + `.0;
+const float HEIGHT = ` + (height >> 0) + `.0;
+
+uniform vec3 metaballs[` + numMetaballs + `];
+
+void main(){
+float x = gl_FragCoord.x;
+float y = gl_FragCoord.y;
+
+float sum = 0.0;
+for (int i = 0; i < ` + numMetaballs + `; i++) {
+vec3 metaball = metaballs[i];
+float dx = metaball.x - x;
+float dy = metaball.y - y;
+float radius = metaball.z;
+
+sum += (radius * radius) / (dx * dx + dy * dy);
+}
+
+if (sum >= 1.0) {
+gl_FragColor = vec4(x / WIDTH, y / HEIGHT, y, 1.0);
+return;
+}
+
+gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+}
+
+`;
+
+var vertexShader = compileShader(vertexShaderSrc, gl.VERTEX_SHADER);
+var fragmentShader = compileShader(fragmentShaderSrc, gl.FRAGMENT_SHADER);
+
+var program = gl.createProgram();
+gl.attachShader(program, vertexShader);
+gl.attachShader(program, fragmentShader);
+gl.linkProgram(program);
+gl.useProgram(program);
+
+var vertexData = new Float32Array([
+  -1.0,  1.0, // top left
+  -1.0, -1.0, // bottom left
+  1.0,  1.0, // top right
+  1.0, -1.0, // bottom right
+]);
+var vertexDataBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, vertexDataBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.STATIC_DRAW);
+
+var positionHandle = getAttribLocation(program, 'position');
+gl.enableVertexAttribArray(positionHandle);
+gl.vertexAttribPointer(positionHandle,
+                       2, // position is a vec2
+                       gl.FLOAT, // each component is a float
+                       gl.FALSE, // don't normalize values
+                       2 * 4, // two 4 byte float components per vertex
+                       0 // offset into each span of vertex data
+                      );
+
+var metaballsHandle = getUniformLocation(program, 'metaballs');
+
+loop();
+function loop() {
+  for (var i = 0; i < numMetaballs; i++) {
+    var metaball = metaballs[i];
+    metaball.x += metaball.vx;
+    metaball.y += metaball.vy;
+
+    if (metaball.x < metaball.r || metaball.x > width - metaball.r) metaball.vx *= -1;
+    if (metaball.y < metaball.r || metaball.y > height - metaball.r) metaball.vy *= -1;
+  }
+
+  var dataToSendToGPU = new Float32Array(3 * numMetaballs);
+  for (var i = 0; i < numMetaballs; i++) {
+    var baseIndex = 3 * i;
+    var mb = metaballs[i];
+    dataToSendToGPU[baseIndex + 0] = mb.x;
+    dataToSendToGPU[baseIndex + 1] = mb.y;
+    dataToSendToGPU[baseIndex + 2] = mb.r;
+  }
+  gl.uniform3fv(metaballsHandle, dataToSendToGPU);
+  
+  //Draw
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+  requestAnimationFrame(loop);
+}
+
+function compileShader(shaderSource, shaderType) {
+  var shader = gl.createShader(shaderType);
+  gl.shaderSource(shader, shaderSource);
+  gl.compileShader(shader);
+
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    throw "Shader compile failed with: " + gl.getShaderInfoLog(shader);
+  }
+
+  return shader;
+}
+
+function getUniformLocation(program, name) {
+  var uniformLocation = gl.getUniformLocation(program, name);
+  if (uniformLocation === -1) {
+    throw 'Can not find uniform ' + name + '.';
+  }
+  return uniformLocation;
+}
+
+function getAttribLocation(program, name) {
+  var attributeLocation = gl.getAttribLocation(program, name);
+  if (attributeLocation === -1) {
+    throw 'Can not find attribute ' + name + '.';
+  }
+  return attributeLocation;
+}
+
+canvas.onmousemove = function(e) {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+}
+
+</script>
+</html>

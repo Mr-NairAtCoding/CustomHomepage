@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js Session 3</title>
+	<style>
+		.modal{
+			border: 2px solid black;
+			height: 250px;
+			margin: 40px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<div class="class1">1</div>
+<div class="class1">2</div>
+<div class="class1">3</div>
+<button onclick="abc();">click me</button>
+<h1>h1</h1>
+<h1>h2</h1>
+<h1>h3</h1>
+<button onclick="modal();">try it</button>
+
+<div class="modal" id="demo1">
+	<span style="padding: 40px; font-size: 40px; float: right;" id="demo2">&times;</span>
+</div>
+<script>
+	
+	
+
+function modal() {
+	// document.getElementById("demo1").style.display="block"
+
+}
+
+
+	function abc() {
+	var x = document.getElementsByClassName('class1');
+	x[0].innerHTML = "hey"	
+	x[0].style.backgroundColor = "lightblue"
+}
+var x = document.getElementsByTagName('h1')[0].innerHTML="hey"
+
+
+var a = Array("abc","pqr",123456,5453,3.3);
+alert(a[4]);
+	
+var a = [1,"abc",23234]
+alert(a[2]);
+
+
+var obj = {
+	name : "hiral",
+	email : "hiral@gmail.com",
+	contact : 12345
+}
+document.write(obj.name,obj.email,obj.contact);
+
+
+var emp = {
+	name : "emp1",
+	email : "emp@gmail.com",
+	contact :Array(123456,9876)
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+<!-- Arithmetic Operators
+	Operator	Description
+		+		Addition
+		-		Subtraction
+		*		Multiplication
+		**		Exponentiation 
+		/		Division
+		%		Modulus (Division Remainder)
+		++		Increment
+		--		Decrement
+Assignment Operators
+	Operator	Example		Same As
+		=		x = y		x = y
+		+=		x += y		x = x + y
+		-=		x -= y		x = x - y
+		*=		x *= y		x = x * y
+		/=		x /= y		x = x / y
+		%=		x %= y		x = x % y
+		**=		x **= y		x = x ** y
+Comparison Operators
+	Operator	Description
+		==	equal to
+		===	equal value and equal type
+		!=	not equal
+		!==	not equal value or not equal type
+		>	greater than
+		<	less than
+		>=	greater than or equal to
+		<=	less than or equal to
+Logical Operators
+&&	logical and
+||	logical or  -->

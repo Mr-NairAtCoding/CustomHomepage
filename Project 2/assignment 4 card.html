@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	
+	.cone{
+		background-color: #F6E9CB;
+		height: 700px;
+	color: blue;
+
+
+	}.ctwo{
+		height: 700px;
+		background-color: #E488CF;
+		}
+
+		.innerdiv1{
+		padding: 100px;
+	}
+	.addressC{
+		margin-top: -74px;
+
+	}
+	.form-control-2{
+		width: 300px;
+		height: 100px;
+		/*margin-left: ;47px*/
+	}
+
+	.innerdiv2{
+		padding: 100px;
+		background-color: white;
+		height: 600px;
+		margin-top: 50px;
+	}
+
+	#divID{
+		size: 40px;
+		color: red;
+		font-family: 'Spicy Rice', cursive;
+border: 2px solid blue;
+
+	}
+  #divID2{
+    size: 40px;
+    color: orange;
+    font-family: 'Spicy Rice', cursive;
+    border: 2px solid blue;
+  }
+  #divID3{
+    size: 40px;
+    color: red;
+    font-family: 'Spicy Rice', cursive;
+border: 2px solid blue;
+
+  }
+  #divID4{
+    size: 40px;
+    color: orange;
+    font-family: 'Spicy Rice', cursive;
+    border: 2px solid blue;
+  }
+#divID5{
+    size: 40px;
+    color: red;
+    font-family: 'Spicy Rice', cursive;
+    border: 2px solid blue;
+  }
+
+</style>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+	   <link rel="stylesheet" type="text/css" href="../html/fontawesome-free-5.12.0-web/css/all.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+      <script src="jquery.min.js"></script>
+<body>
+<div class="container">
+<div class="row ">
+
+
+<!-- 	first div -->	
+
+<div class="col-sm-6 cone">
+		<div class="innerdiv1">
+			<h1>Invitation card</h1>
+			<div class="input-group mb-3">
+  <input  type="text" id="name"class="form-control" placeholder="enter Name"aria-label="Username">
+</div>
+            <div class="input-group mb-3">
+  <input type="text" id="date"class="form-control" placeholder="enter Day"  aria-label="Username">
+            </div>
+
+  <label>dd/mm/yyyy:</label>
+  <input type="date" id="birthday"  name="dd/mm/yyyy">
+
+<br><br><br><br>
+<div class="input-group addressC">
+  <input  type="text" class="form-control-2" id="address" aria-label="With textarea" placeholder="enter Address">
+</div>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" id="invitation"placeholder="Invited by" aria-label="invitation">
+</div>
+		</div>
+<!-- SECOND DIV -->		
+	</div><div class="col-sm-6 ctwo">
+		<div class="innerdiv2">
+		<h1 style="font-family: 'Spicy Rice', cursive;color: #E7BE93;width: 600px;margin-top: -50px;">Join us as we celebrate</h1>
+
+<div id="divID" > </div><br>
+<div id="divID2"></div><br>
+<div id="divID3"></div><br>
+<div id="divID4"></div><br>
+<div id="divID5"></div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+$('#name').on('input', function() {
+  var naam = $('#name').val();
+  $('#divID').text(naam);  
+});
+$('#date').on('input', function() {
+  var din = $('#date').val();
+  $('#divID2').text(din);  
+});
+$('#birthday').on('input', function() {
+  var janam = $('#birthday').val();
+  $('#divID3').text(janam);  
+});
+$('#address').on('input', function() {
+  var pata = $('#address').val();
+  $('#divID4').text(pata);  
+});
+$('#invitation').on('input', function() {
+  var invite = $('#invitation').val();
+  $('#divID5').text(invite);  
+});
+});
+  
+</script>
+		
+	</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
